@@ -37,6 +37,9 @@ function addPhraseToDisplay(arr) {
     if(letter !== ' ') {
       li.className = 'letter'
     }
+    else {
+      li.className = 'space'
+    }
   }
 }
 
@@ -65,6 +68,7 @@ qwerty.addEventListener('click', (e) => {
       missed += 1;
       heart = document.querySelector('.tries');
       scoreboard.removeChild(heart);
+      e.target.disabled = true;
     }
   }
   checkWin()
